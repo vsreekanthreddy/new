@@ -1,0 +1,11 @@
+#akms
+apiVersion: v1
+kind: Pod
+metadata:
+ name: pod2
+spec:
+ containers:
+  - name: container-2
+    image: nginx
+    ports:
+     - containerPort: 8080

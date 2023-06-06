@@ -1,0 +1,13 @@
+# akmstps
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service1
+spec:
+  type: NodePort
+  ports:
+   - port: 80 #this is for clusterip
+     targetPort: 80 #containerport
+     nodePort: 30000 # 30000 to 32767
+  selector:
+   env: prod            # deployment label
